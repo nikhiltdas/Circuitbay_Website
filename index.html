@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CircuitBay - Electronics & IoT Components</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                
+                <div class="flex items-center space-x-3">
+                    <img src="assets/logo.png" alt="CircuitBay Logo" class="h-12 w-auto">
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="#products" class="text-gray-700 hover:text-primary transition-colors">Products</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                    <a href="https://www.instagram.com/circuitbayofficial?igsh=cHZtN3V6emZ6b3Bh" target="_blank" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all">
+                        <i class="fab fa-instagram mr-2"></i>Follow Us
+                    </a>
+                </div>
+                
+                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="#products" class="text-gray-700 hover:text-primary transition-colors">Products</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                    <a href="https://www.instagram.com/circuitbayofficial?igsh=cHZtN3V6emZ6b3Bh" target="_blank" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg text-center">
+                        <i class="fab fa-instagram mr-2"></i>Follow Us
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-br from-blue-600 via-primary to-secondary text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-5xl font-bold mb-6 leading-tight">
+                        Power Your <span class="text-yellow-300">Innovation</span> with Quality Components
+                    </h2>
+                    <p class="text-xl mb-8 text-blue-100">
+                        From Arduino boards to sensors, we provide premium electronics and IoT components for students, hobbyists, and developers. Build your next breakthrough project with CircuitBay.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#products" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center">
+                            Shop Components
+                        </a>
+                        <a href="https://www.instagram.com/circuitbayofficial?igsh=cHZtN3V6emZ6b3Bh" target="_blank" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors text-center">
+                            <i class="fab fa-instagram mr-2"></i>View on Instagram
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white/20 rounded-lg p-4 text-center">
+                                <i class="fas fa-microchip text-3xl mb-2"></i>
+                                <p class="font-semibold">Microcontrollers</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 text-center">
+                                <i class="fas fa-wifi text-3xl mb-2"></i>
+                                <p class="font-semibold">IoT Modules</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 text-center">
+                                <i class="fas fa-bolt text-3xl mb-2"></i>
+                                <p class="font-semibold">Sensors</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 text-center">
+                                <i class="fas fa-cogs text-3xl mb-2"></i>
+                                <p class="font-semibold">Components</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">Why Choose CircuitBay?</h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We understand the needs of makers, students, and developers. That's why we curate only the best components for your projects.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 rounded-xl bg-gray-50 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shipping-fast text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">Fast Delivery</h4>
+                    <p class="text-gray-600">Quick and reliable shipping to get your components when you need them for your projects.</p>
+                </div>
+                
+                <div class="text-center p-8 rounded-xl bg-gray-50 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-award text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">Quality Assured</h4>
+                    <p class="text-gray-600">All components are tested and verified to ensure they meet the highest quality standards.</p>
+                </div>
+                
+                <div class="text-center p-8 rounded-xl bg-gray-50 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">Community Support</h4>
+                    <p class="text-gray-600">Join our community of makers and get support for your projects and component selection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Preview -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">Featured Products</h3>
+                <p class="text-xl text-gray-600">Explore our most popular electronics and IoT components</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6 mb-12">
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                        <i class="fas fa-microchip text-4xl text-gray-400"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Arduino Uno R3</h4>
+                   
+                    <p class="text-gray-600 mb-4">Perfect for beginners and prototyping</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-primary">₹450</span>
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                        <i class="fas fa-wifi text-4xl text-gray-400"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">ESP32 DevKit</h4>
+                    <p class="text-gray-600 mb-4">WiFi & Bluetooth enabled microcontroller</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-primary">₹650</span>
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                        <i class="fas fa-thermometer-half text-4xl text-gray-400"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">DHT22 Sensor</h4>
+                    <p class="text-gray-600 mb-4">Temperature & humidity sensor</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-primary">₹180</span>
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                        <i class="fas fa-led text-4xl text-gray-400"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">LED Strip Kit</h4>
+                    <p class="text-gray-600 mb-4">Addressable RGB LED strip</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-primary">₹320</span>
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="products.html" class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-secondary transition-colors inline-block">
+                    View All Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram CTA -->
+    <section class="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <i class="fab fa-instagram text-6xl mb-6"></i>
+                <h3 class="text-4xl font-bold mb-6">Follow Us on Instagram</h3>
+                <p class="text-xl mb-8 text-purple-100">
+                    Stay updated with our latest products, project ideas, and electronics tips. Join our community of makers and innovators!
+                </p>
+                <a href="https://www.instagram.com/circuitbayofficial?igsh=cHZtN3V6emZ6b3Bh" target="_blank" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
+                    <i class="fab fa-instagram mr-2"></i>@circuitbay
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-4xl font-bold text-gray-800 mb-6">About CircuitBay</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        CircuitBay was founded with a simple mission: to make quality electronics and IoT components accessible to students, hobbyists, and developers across India.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        We understand the challenges of finding reliable components for your projects. That's why we carefully curate our inventory to include only the best products from trusted manufacturers.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <div class="text-2xl font-bold text-primary">500+</div>
+                            <div class="text-gray-600">Products</div>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <div class="text-2xl font-bold text-primary">1000+</div>
+                            <div class="text-gray-600">Happy Customers</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-2xl p-8">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                            <i class="fas fa-graduation-cap text-2xl text-primary mb-2"></i>
+                            <p class="font-semibold text-gray-800">Students</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                            <i class="fas fa-hammer text-2xl text-primary mb-2"></i>
+                            <p class="font-semibold text-gray-800">Hobbyists</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                            <i class="fas fa-code text-2xl text-primary mb-2"></i>
+                            <p class="font-semibold text-gray-800">Developers</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                            <i class="fas fa-lightbulb text-2xl text-primary mb-2"></i>
+                            <p class="font-semibold text-gray-800">Innovators</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">Get in Touch</h3>
+                <p class="text-xl text-gray-600">Have questions about our products or need help with your project?</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-instagram text-white"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Instagram</h4>
+                    <p class="text-gray-600 mb-4">Follow us for updates</p>
+                    <a href="https://www.instagram.com/circuitbayofficial?igsh=cHZtN3V6emZ6b3Bh" target="_blank" class="text-primary hover:text-secondary">@circuitbay</a>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-white"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Email</h4>
+                  
+                    <p class="text-gray-600 mb-4">Send us a message</p>
+                    <a href="mailto:circuitbayofficial@gmail.com" class="text-primary hover:text-secondary">circuitbayofficial@gmail.com</a>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-white"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Phone</h4>
+                    <a href="tel:+918281461307"></a>
+                    <p class="text-gray-600 mb-4">Call us directly</p>
+                    <a href="tel:+919876543210" class="text-primary hover:text-secondary">+91 8281461307</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/logo.png" alt="CircuitBay Logo" class="h-10 w-auto">
+                    </div>
+                    <p class="text-gray-400 mb-4">Empowering innovation with quality electronics and IoT components.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/circuitbay" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="text-lg font-bold mb-4">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="text-lg font-bold mb-4">Categories</h5>
+                    <ul class="space-y-2">
+                        <li><a href="products.html#microcontrollers" class="text-gray-400 hover:text-white transition-colors">Microcontrollers</a></li>
+                        <li><a href="products.html#sensors" class="text-gray-400 hover:text-white transition-colors">Sensors</a></li>
+                        <li><a href="products.html#iot" class="text-gray-400 hover:text-white transition-colors">IoT Modules</a></li>
+                        <li><a href="products.html#components" class="text-gray-400 hover:text-white transition-colors">Components</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="text-lg font-bold mb-4">Contact Info</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-envelope mr-2"></i>info@circuitbay.org</li>
+                        <li><i class="fas fa-phone mr-2"></i>+91 8281461307</li>
+                        <li><i class="fab fa-instagram mr-2"></i>@Circuitbay_Official</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 CircuitBay. All rights reserved. Built with ❤️ for makers and innovators.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
